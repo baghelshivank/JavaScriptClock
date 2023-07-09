@@ -1,0 +1,85 @@
+
+html{
+    background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
+    background-size: cover;
+    font-family: 'helvetica neue';
+}
+
+.clock{
+    position: relative;
+    height: 30rem;
+    width: 30rem;
+    top: 15vh;
+    left: 65vw;
+}
+.clock-face{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    width: 90%;
+    border-radius:50%;
+    border: 20px solid white;
+    box-shadow:
+    0 0 0 4px rgba(0,0,0,0.1),
+    0 0 0 4px #EFEFEF,
+    inset 0 0 10px black,
+    0 0 10px rgba(0,0,0,0.2);
+}
+#digitH{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 12%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+#digitV{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 12%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+}
+#digitH, #digitV > span{
+    color: white;
+}
+#xii, #iii, #vi, #ix{
+    display: block;
+    position:relative;
+    font-size: 2rem;
+}
+.hand{
+    width: 50%;
+    display: inline-block;
+    background-color: black;
+    position:absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0%;
+    transform: translate(0, -50%) rotate(0deg);
+    transform-origin: 100%;
+}
+.hour-hand{
+    background-color: black;
+    height: 1.5%;
+}
+.minute-hand{
+    background-color: rgb(25, 25, 25);
+    height: 1%;
+}
+.second-hand{
+    background-color: rgb(50, 50, 50);
+    height: 0.5%;
+}
+
+
+
