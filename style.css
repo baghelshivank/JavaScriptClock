@@ -59,27 +59,51 @@ html{
 }
 .hand{
     width: 50%;
+    border-radius: 25%;
     display: inline-block;
     background-color: black;
     position:absolute;
     z-index: -1;
     top: 50%;
     left: 0%;
-    transform: translate(0, -50%) rotate(0deg);
+    transform: translate(0, -50%) rotate(90deg);
     transform-origin: 100%;
+    transition: all 0.01s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
 }
 .hour-hand{
     background-color: black;
-    height: 1.5%;
+    height: 2%;
+    width: 35%;
+    left: 15%;
 }
 .minute-hand{
     background-color: rgb(25, 25, 25);
-    height: 1%;
+    height: 1.5%;
+    width: 40%;
+    left: 10%;
 }
 .second-hand{
     background-color: rgb(50, 50, 50);
-    height: 0.5%;
+    height: 1%;
+    width: 55%;
+    left: 5%;
+    transform-origin: 81.81%;
+    z-index: 2;
 }
-
+.second-hand::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 16%;
+    top: -50%;
+    width: 12px; 
+    height: 12px; 
+    border-radius: 50%;
+    background-color: white; 
+  }
+  
 
 
